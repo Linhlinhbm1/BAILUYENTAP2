@@ -35,7 +35,17 @@ WHERE total_sales< cogs
 GROUP BY manufacturer
 ORDER BY total_loss DESC
 --baitap9--
-
+select * from cinema
+where id%2=1 and description <> 'boring'
+order by rating  desc
+-- baitap10-- 
+select teacher_id, 
+count(distinct subject_id ) as cnt from teacher
+group by teacher_id
+--baitap11--
+select class from courses
+group by class
+having count(student) >=5
 
 -- buoc 1: phan tich yeu cau
 -- 1. output: goc/ phaisinh--
